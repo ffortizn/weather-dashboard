@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Francisco Ortiz</title>
+    <link href="static/css/reset.css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="container navbar-expand-sm navbar-dark">
+            <a style="float:left;" class="nav-link active" href="https://ffortizn.github.io/">Francisco Ortiz</a>
+        </nav>
+        <nav class="container navbar-expand-sm navbar-dark">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Weather dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-white bg-dark text-center">
+                <h2>Weather dashboard</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-row">
+                            <form>
+                                <label>Search for a city:</label>
+                                <div class="input-group">
+                                    <input class="form-control" id="searchCity">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" id="btnSearch"><i
+                                                class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <br>
+                        <div class="form-row" id="results">
+                            <ul class="list-group-action col-md-12" id="ulResults">
+                                <!-- <li class="list-group-item active text-center btn-outline-secondary" id="results-label">Results</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-row mb-4">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header" id="currentCard">City: day, date</div>
+                                    <div class="card-body">
+                                        <div id="currentCardIcon">☺</div>
+                                        <div id="currentCardTemperature">temp</div>
+                                        <div id="currentCardHumidity">humidity</div>
+                                        <div id="currentCardWindSpeed">wind-speed</div>
+                                        <div id="currentCardUvIndex">uv-index</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="city">Forecast</div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-secondary text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-success text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-primary text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-primary text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-primary text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 mb-2">
+                                        <div class="card text-white bg-primary text-center">
+                                            <div id="title">date</div>
+                                            <div id="icon">☺</div>
+                                            <div id="temperature">temp</div>
+                                            <div id="humidity">humidity</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="input-group" id="activityGroup">
+                    <div class="input-group-prepend" id="timeContainer">
+                        <div class="btn btn-outline-secondary" id="time">9:00 AM</div>
+                    </div>
+                    <input class="form-control"
+                        value="" id="activityDescription">
+                    <div class="input-group-append" id="actionGroup">
+                        <button class="btn btn-success" type="button" id="actionSave">Save</button>
+                        <button class="btn btn-danger" type="button" id="actionDelete">Delete</button>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="card-footer text-center">
+                <!-- <button class="btn-lg btn-primary col-md-3" id="loadTasks"> Load Tasks </button> -->
+                <!-- <button class="btn-lg btn-success col-md-3" id="saveTasks"> Save Tasks </button> -->
+                ...
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        Copyright &copy; 2019 - Francisco Ortiz
+    </footer>
+</body>
+
+</html>
